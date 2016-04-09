@@ -5,7 +5,11 @@ import { connect } from 'react-redux';
 import { Workdays } from '../../collections';
 import Workday from './workday';
 
-Meteor.subscribe('workdays.list').ready();
+Meteor.subscribe('workdays.list');
+
+const toDate = (iso) => {
+  return moment(iso.getTime()).format('D MMMM YYYY');
+};
 
 const Home = ({ workdays }) => (
   <div className="container">
@@ -19,15 +23,16 @@ const Home = ({ workdays }) => (
 
     <div className="row">
       {workdays.map(workday =>
-        <Workday key={workday._id} {...workday} />
+        <Workday key={workday._id} date={toDate(workday.workdate)} {...workday} />
       )}
     </div>
   </div>
 );
 
 const mapStateToProps = (state) => {
+
   return {
-    workdays: Workdays.find({})
+    workdays: Workdays.find().fetch()
   };
 };
 
