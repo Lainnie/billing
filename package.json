@@ -1,0 +1,17 @@
+{
+  "name": "my-accounting",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "classnames": "^2.2.3",
+    "meteor-node-stubs": "~0.2.0",
+    "react-mounter": "^1.1.0",
+    "react-paginate": "^1.0.3",
+    "react-redux": "^4.4.2",
+    "redux": "^3.4.0",
+    "redux-logger": "^2.6.1",
+    "redux-thunk": "^2.0.1"
+  }
+}
