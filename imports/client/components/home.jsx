@@ -1,10 +1,11 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { connect } from 'react-redux';
+import { composeWithTracker } from 'react-komposer';
 
 import Workday from './workday';
 import NewWorkday from './newWorkday';
-import getWorkdays from '../actions/getWorkdays';
+import { Workdays } from '../../collections';
 import Store from '../store';
 
 // Where to put helpers methods ?
@@ -33,13 +34,17 @@ const Home = ({ workdays, newWorkday }) => (
 
 const mapStateToProps = (state) => {
   return {
-    workdays: state.workdays,
     newWorkday: state.newWorkday
   };
 };
 
-Meteor.subscribe('workdays.list', () => {
-  Store.dispatch(getWorkdays());
-});
+const composer = (props, onDate) => {
+  if (Meteor.subscribe('workdays.list').ready()) {
+    const workdays = Workdays.find().fetch();
+    onDate(null, {workdays});
+  };
+};
 
-export default connect(mapStateToProps)(Home);
+const HomeContainer = connect(mapStateToProps)(Home);
+
+export default composeWithTracker(composer)(HomeContainer);
