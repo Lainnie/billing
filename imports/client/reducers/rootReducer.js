@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
 
-import useless from './useless';
+import workdays from './workdays';
 
 const rootReducer = combineReducers({
-  useless
+  workdays
 });
 
 export default rootReducer;

@@ -4,8 +4,8 @@ import { connect } from 'react-redux';
 
 import { Workdays } from '../../collections';
 import Workday from './workday';
-
-Meteor.subscribe('workdays.list');
+import getWorkdays from '../actions/getWorkdays';
+import Store from '../store';
 
 const toDate = (iso) => {
   return moment(iso.getTime()).format('D MMMM YYYY');
@@ -37,10 +37,13 @@ const Home = ({ workdays }) => (
 );
 
 const mapStateToProps = (state) => {
-
   return {
-    workdays: Workdays.find().fetch()
+    workdays: state.workdays
   };
 };
+
+Meteor.subscribe('workdays.list', () => {
+  Store.dispatch(getWorkdays());
+});
 
 export default connect(mapStateToProps)(Home);
