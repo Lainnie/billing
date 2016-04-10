@@ -2,22 +2,17 @@ import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { connect } from 'react-redux';
 
-import { Workdays } from '../../collections';
 import Workday from './workday';
+import NewWorkday from './newWorkday';
 import getWorkdays from '../actions/getWorkdays';
 import Store from '../store';
 
-const toDate = (iso) => {
-  return moment(iso.getTime()).format('D MMMM YYYY');
+// Where to put helpers methods ?
+const toDate = (timeStamp) => {
+  return moment(timeStamp).format('D MMMM YYYY');
 };
 
-const defaultWorday = {
-  date: 'Select a date',
-  workload: 1,
-  company: 'Select a company'
-};
-
-const Home = ({ workdays }) => (
+const Home = ({ workdays, newWorkday }) => (
   <div className="container">
     <div className="page-header">
       <div className="row">
@@ -28,9 +23,9 @@ const Home = ({ workdays }) => (
     </div>
 
     <div className="row">
-      <Workday {...defaultWorday} />
+      <NewWorkday {...newWorkday} />
       {workdays.map(workday =>
-        <Workday key={workday._id} date={toDate(workday.workdate)} {...workday} />
+        <Workday key={workday._id} {...workday} workdate={toDate(workday.workdate)} />
       )}
     </div>
   </div>
@@ -38,7 +33,8 @@ const Home = ({ workdays }) => (
 
 const mapStateToProps = (state) => {
   return {
-    workdays: state.workdays
+    workdays: state.workdays,
+    newWorkday: state.newWorkday
   };
 };
 

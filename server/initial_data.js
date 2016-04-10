@@ -8,7 +8,7 @@ if (!Workdays.findOne()) {
       company: 'Teezily',
       price: 450,
       workload: 1 - (lc * 0.1),
-      workdate: moment({ day: lc + 1}).toDate()
+      workdate: moment({ day: lc + 1}).valueOf()
     });
   }
 }

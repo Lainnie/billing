@@ -12,3 +12,49 @@
     margin: 0;
   }
 }
+
+.workday {
+  .dropup .caret {
+    border-top: 0;
+    border-bottom: 15px solid;
+  }
+
+  .caret {
+    border-top: 15px dashed;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+  }
+
+  .date-input {
+    position: absolute;
+    display: inline;
+    height: 0px;
+    border: none;
+    padding: 0;
+  }
+
+  .new-workday {
+    .create {
+      display: block;
+    }
+  }
+
+  .create {
+    display: none;
+    position: absolute;
+    top: -20px;
+    left: -5px;
+    border-radius: 64px;
+    padding: 10px 16px;
+  }
+}
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('packages/bootswatch_paper/bootstrap/dist/fonts/glyphicons-halflings-regular.eot');
+  src: url('packages/bootswatch_paper/bootstrap/dist/fonts/glyphicons-halflings-regular.eot?') format('embedded-opentype'),
+    url('packages/bootswatch_paper/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2') format('woff2'),
+    url('packages/bootswatch_paper/bootstrap/dist/fonts/glyphicons-halflings-regular.woff') format('woff'),
+    url('packages/bootswatch_paper/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf') format('truetype'),
+    url('packages/bootswatch_paper/bootstrap/dist/fonts/glyphicons-halflings-regular.svg') format('svg');
+}

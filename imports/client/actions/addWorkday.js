@@ -1,7 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 
-export default function addWorkday() {
+export default function addWorkday(workday) {
   return () => {
-    Meteor.call('addWorkday');
+    Meteor.call('addWorkday', workday);
   };
 };
