@@ -24,6 +24,8 @@ export function newWorkday(state = initialeState, action) {
         workdate: action.workdate,
         readable_workdate: moment(action.workdate).format('D MMMM YYYY')
       });
+    case 'RESET_NEW_WORKDAY':
+      return Object.assign({}, state, initialeState);
     default:
       return state;
   }

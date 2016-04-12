@@ -3,17 +3,19 @@ import { connect } from 'react-redux';
 import { $ } from 'meteor/jquery';
 import { moment } from 'meteor/momentjs:moment';
 
+import resetNewWorkday from '../actions/resetNewWorkday';
 import changeWorkload from '../actions/changeWorkload';
 import changeDate from '../actions/changeDate';
 import addWorkday from '../actions/addWorkday';
-import Workday from './workday';
+import Workday from '../components/workday';
 
-class NewWorkday extends React.Component {
+class NewWorkdayContainer extends React.Component {
 
   events() {
     return {
       addWorkday: (evt) => {
         this.props.dispatch(addWorkday(this.props));
+        this.props.dispatch(resetNewWorkday());
       },
       chooseDate: (evt) => {
         const $panel = $(evt.currentTarget);
@@ -49,4 +51,4 @@ class NewWorkday extends React.Component {
   }
 };
 
-export default connect()(NewWorkday);
+export default connect()(NewWorkdayContainer);

@@ -12,5 +12,8 @@ Meteor.methods({
     });
 
     return workdays;
+  },
+  deleteWorkday(_id) {
+    Workdays.remove({_id});
   }
 });

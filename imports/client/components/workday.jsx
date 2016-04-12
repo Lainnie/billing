@@ -23,7 +23,12 @@ const Workday = (props) => (
         <h1>{props.workload}</h1>
         <span onClick={props.downWorkload} className="caret"></span>
       </div>
-      <div className="panel-footer">{props.company}</div>
+      <div className="panel-footer">
+        {props.company}
+        <a href="#" onClick={props.deleteWorkday} className="delete btn btn-danger">
+          <i className="glyphicon glyphicon-minus"></i>
+        </a>
+      </div>
     </div>
   </div>
 );

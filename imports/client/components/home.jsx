@@ -3,8 +3,8 @@ import { Meteor } from 'meteor/meteor';
 import { connect } from 'react-redux';
 import { composeWithTracker } from 'react-komposer';
 
-import Workday from './workday';
-import NewWorkday from './newWorkday';
+import Workday from '../containers/workday';
+import NewWorkday from '../containers/newWorkday';
 import { Workdays } from '../../collections';
 import Store from '../store';
 
@@ -18,7 +18,7 @@ const Home = ({ workdays, newWorkday }) => (
     <div className="page-header">
       <div className="row">
         <div className="text-center col-xs-12">
-          <h1>Facturation made easy</h1>
+          <h1>Billing made easy</h1>
         </div>
       </div>
     </div>
