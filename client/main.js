@@ -1,1 +1,1 @@
-import Router from '../imports/client/router';
+import { router } from '../imports/client/core';

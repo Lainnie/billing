@@ -6,7 +6,6 @@ import { composeWithTracker } from 'react-komposer';
 import { NewWorkday, Workday } from '../containers';
 
 import { Workdays } from '../../collections';
-import Store from '../store';
 
 // Where to put helpers methods ?
 const toDate = (timeStamp) => {

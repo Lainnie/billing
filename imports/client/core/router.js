@@ -2,7 +2,7 @@ import React from 'react';
 
 import { FlowRouter } from 'meteor/kadira:flow-router';
 import { mount } from 'react-mounter';
-import { RootApp, Home } from './components';
+import { RootApp, Home } from '../components';
 
 FlowRouter.route('/', {
   name: 'homepage',
