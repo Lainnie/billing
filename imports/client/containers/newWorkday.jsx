@@ -10,7 +10,7 @@ import {
   resetNewWorkday
 } from '../actions';
 
-import Workday from '../components/workday';
+import { Workday } from '../components';
 
 class NewWorkdayContainer extends React.Component {
 

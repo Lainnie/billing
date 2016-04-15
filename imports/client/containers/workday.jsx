@@ -4,7 +4,7 @@ import { $ } from 'meteor/jquery';
 import { moment } from 'meteor/momentjs:moment';
 
 import { deleteWorkday } from '../actions';
-import Workday from '../components/workday';
+import { Workday } from '../components';
 
 class WorkDayContainer extends React.Component {
   events() {

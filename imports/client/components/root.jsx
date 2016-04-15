@@ -3,8 +3,7 @@ import { Provider } from 'react-redux';
 import { connect } from 'react-redux';
 
 import Store from '../store';
-import Nav from './nav';
-import Footer from './footer';
+import { Nav, Footer } from '.';
 
 const RootApp = ({ content = () => null }) => (
   <Provider store={Store}>
