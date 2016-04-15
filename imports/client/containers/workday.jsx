@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { $ } from 'meteor/jquery';
 import { moment } from 'meteor/momentjs:moment';
 
-import deleteWorkday from '../actions/deleteWorkday';
+import { deleteWorkday } from '../actions';
 import Workday from '../components/workday';
 
 class WorkDayContainer extends React.Component {
