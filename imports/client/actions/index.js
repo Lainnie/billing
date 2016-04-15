@@ -1,7 +1,7 @@
 import addWorkday from './addWorkday';
 import changeWorkload from './changeWorkload';
 import changeDate from './changeDate';
-import resetNewWorkday from './addWorkday';
+import resetNewWorkday from './resetNewWorkday';
 import deleteWorkday from './deleteWorkday';
 
 export {
