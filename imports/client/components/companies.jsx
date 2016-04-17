@@ -1,6 +1,7 @@
 import React from 'react';
 
-import Company from './company';
+import { NewCompany } from '../containers';
+import { Company } from '../components';
 
 const Companies = ({ companies, newCompany }) => (
   <div className="container companies">
@@ -13,8 +14,8 @@ const Companies = ({ companies, newCompany }) => (
     </div>
 
     <div className="row">
-      <Company {...newCompany} style='new' />
-      {companies.map(company => 
+      <NewCompany {...this.props} {...newCompany} style='new' />
+      {companies.map(company =>
         <Company key={company._id} {...company} />
       )}
     </div>

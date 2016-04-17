@@ -6,14 +6,25 @@ const Company = (props) => (
       <a href="#" onClick={props.addCompany} className="create btn btn-success">
         <i className="glyphicon glyphicon-plus"></i>
       </a>
+
       <div className="panel-heading">
-        <div className="row">
-          <div className="col-xs-12">{props.name}</div>
-        </div>
+        <input
+          onChange={props.changeName}
+          className="heading-input"
+          placeholder={props.placeholder}
+          value={props.name} />
       </div>
+
       <div className="panel-body">
-        <h1>{props.price}</h1>
+        <h1>
+          <input
+            onChange={props.changePrice}
+            className="body-input"
+            placeholder={props.placeholder}
+            value={props.price} />
+          </h1>
       </div>
+
       <div className="panel-footer">
         Total workday ?
         <a href="#" onClick={props.deleteWorkday} className="delete btn btn-danger">

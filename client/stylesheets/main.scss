@@ -50,10 +50,24 @@
     position: absolute;
     display: inline;
     height: 0px;
-    border: none;
+    border: none!important;
     padding: 0;
   }
 
+}
+
+.heading-input {
+  text-align: center;
+  border: none;
+  box-shadow: none;
+  background-color: #2196f3;
+}
+
+.body-input {
+  text-align: center;
+  border: none;
+  box-shadow: none;
+  width: 100%;
 }
 
 .new {
@@ -78,4 +92,20 @@
     url('packages/bootswatch_paper/bootstrap/dist/fonts/glyphicons-halflings-regular.woff') format('woff'),
     url('packages/bootswatch_paper/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf') format('truetype'),
     url('packages/bootswatch_paper/bootstrap/dist/fonts/glyphicons-halflings-regular.svg') format('svg');
+}
+
+*::-webkit-input-placeholder {
+  color: white;
+}
+*:-moz-placeholder {
+  /* FF 4-18 */
+  color: white;
+}
+*::-moz-placeholder {
+  /* FF 19+ */
+  color: white;
+}
+*:-ms-input-placeholder {
+  /* IE 10+ */
+  color: white;
 }

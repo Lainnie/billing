@@ -1,6 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 
-import { Workdays } from '../imports/collections';
+import { Workdays, Companies } from '../imports/collections';
 
 Meteor.methods({
   addWorkday(workday) {
@@ -15,5 +15,13 @@ Meteor.methods({
   },
   deleteWorkday(_id) {
     Workdays.remove({_id});
+  },
+  addCompany(company) {
+    const companies = Companies.insert({
+      name: company.name,
+      price: company.price
+    });
+
+    return companies;
   }
 });
