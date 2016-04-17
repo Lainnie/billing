@@ -3,10 +3,9 @@ import { Meteor } from 'meteor/meteor';
 import { connect } from 'react-redux';
 import { composeWithTracker } from 'react-komposer';
 
-import Workday from '../containers/workday';
-import NewWorkday from '../containers/newWorkday';
+import { NewWorkday, Workday } from '../containers';
+
 import { Workdays } from '../../collections';
-import Store from '../store';
 
 // Where to put helpers methods ?
 const toDate = (timeStamp) => {

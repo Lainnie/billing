@@ -1,6 +1,6 @@
 import { moment } from 'meteor/momentjs:moment';
 
-import { Workdays } from '../imports/collections/index';
+import { Workdays } from '../imports/collections';
 
 if (!Workdays.findOne()) {
   for (let lc = 0; lc < 4; lc++) {

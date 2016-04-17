@@ -3,11 +3,14 @@ import { connect } from 'react-redux';
 import { $ } from 'meteor/jquery';
 import { moment } from 'meteor/momentjs:moment';
 
-import resetNewWorkday from '../actions/resetNewWorkday';
-import changeWorkload from '../actions/changeWorkload';
-import changeDate from '../actions/changeDate';
-import addWorkday from '../actions/addWorkday';
-import Workday from '../components/workday';
+import {
+  addWorkday,
+  changeWorkload,
+  changeDate,
+  resetNewWorkday
+} from '../actions';
+
+import { Workday } from '../components';
 
 class NewWorkdayContainer extends React.Component {
 

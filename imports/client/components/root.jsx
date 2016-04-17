@@ -2,12 +2,11 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { connect } from 'react-redux';
 
-import Store from '../store';
-import Nav from './nav';
-import Footer from './footer';
+import { store } from '../core';
+import { Nav, Footer } from '.';
 
 const RootApp = ({ content = () => null }) => (
-  <Provider store={Store}>
+  <Provider store={store}>
     <div>
       <Nav />
       <div className="content">
