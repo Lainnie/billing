@@ -10,12 +10,13 @@ const Nav = () => (
           <span className="icon-bar"></span>
           <span className="icon-bar"></span>
         </button>
-        <a className="navbar-brand" href="#">Billing</a>
+        <a className="navbar-brand" href="/">Billing</a>
       </div>
 
       <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul className="nav navbar-nav navbar-right">
           <li><a href="#">Log in</a></li>
+          <li><a href="/compagnies">Companies</a></li>
         </ul>
         <form className="navbar-form navbar-right" role="search">
           <div className="form-group">

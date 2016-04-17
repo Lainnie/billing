@@ -3,6 +3,7 @@ import React from 'react';
 import { FlowRouter } from 'meteor/kadira:flow-router';
 import { mount } from 'react-mounter';
 import { RootApp, Home } from '../components';
+import { Companies } from '../containers';
 
 FlowRouter.route('/', {
   name: 'homepage',
@@ -13,11 +14,11 @@ FlowRouter.route('/', {
   }
 });
 
-FlowRouter.route('/bernard', {
-  name: 'bernard',
+FlowRouter.route('/compagnies', {
+  name: 'compagnies',
   action: () => {
     mount(RootApp, {
-      content: () => <div>Bernard </div>
+      content: () => <Companies />
     })
   }
 });

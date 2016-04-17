@@ -1,6 +1,13 @@
 import { moment } from 'meteor/momentjs:moment';
 
-import { Workdays } from '../imports/collections';
+import { Workdays, Companies } from '../imports/collections';
+
+if (!Companies.findOne()) {
+  Companies.insert({
+    name: 'Teezily',
+    price: 450
+  });
+}
 
 if (!Workdays.findOne()) {
   for (let lc = 0; lc < 4; lc++) {

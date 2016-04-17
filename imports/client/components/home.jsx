@@ -37,10 +37,10 @@ const mapStateToProps = (state) => {
   };
 };
 
-const composer = (props, onDate) => {
+const composer = (props, onData) => {
   if (Meteor.subscribe('workdays.list').ready()) {
     const workdays = Workdays.find().fetch();
-    onDate(null, {workdays});
+    onData(null, { workdays });
   };
 };
 
