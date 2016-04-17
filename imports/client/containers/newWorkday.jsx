@@ -47,7 +47,7 @@ class NewWorkdayContainer extends React.Component {
   render() {
     return <Workday
       {...this.props}
-      style='new-workday'
+      style='new'
       workdate={this.props.readable_workdate}
       {...this.events()}
       />

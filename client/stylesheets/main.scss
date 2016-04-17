@@ -1,6 +1,7 @@
 .page-header {
   margin: 75px 0 23px;
 }
+
 .panel {
   .delete {
     position: absolute;
@@ -17,11 +18,12 @@
     border-radius: 64px;
     padding: 10px 16px;
   }
-
 }
+
 .content {
   margin-bottom: 100px;
 }
+
 .footer {
   background-color: #f5f5f5;
 
@@ -52,20 +54,20 @@
     padding: 0;
   }
 
-  .new-workday {
-    .create {
-      display: block;
-    }
+}
 
-    .delete {
-      display: none;
-    }
-
-    .caret {
-      visibility: visible;
-    }
+.new {
+  .create {
+    display: block;
   }
 
+  .delete {
+    display: none;
+  }
+
+  .caret {
+    visibility: visible;
+  }
 }
 
 @font-face {

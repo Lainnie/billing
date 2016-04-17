@@ -10,10 +10,7 @@ const Workday = (props) => (
       <div onClick={props.chooseDate} className="panel-heading">
         <input className="date-input js-input" />
         <div className="row">
-          <div className="col-xs-9">{props.workdate}</div>
-          <div className="col-xs-2">
-            <span className="glyphicon glyphicon-th"></span>
-          </div>
+          <div className="col-xs-12">{props.workdate}</div>
         </div>
       </div>
       <div className="panel-body">

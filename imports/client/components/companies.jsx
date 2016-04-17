@@ -13,7 +13,7 @@ const Companies = ({ companies, newCompany }) => (
     </div>
 
     <div className="row">
-      <Company {...newCompany}/>
+      <Company {...newCompany} style='new' />
       {companies.map(company => 
         <Company key={company._id} {...company} />
       )}
