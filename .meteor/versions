@@ -54,6 +54,11 @@ mongo-id@1.0.2
 npm-mongo@1.4.41
 observe-sequence@1.0.9
 ordered-dict@1.0.5
+practicalmeteor:chai@2.1.0_1
+practicalmeteor:loglevel@1.2.0_2
+practicalmeteor:mocha@2.4.5_1
+practicalmeteor:mocha-core@0.1.4
+practicalmeteor:sinon@1.14.1_2
 promise@0.6.5
 rajit:bootstrap3-datepicker@1.5.1
 random@1.0.7
@@ -68,6 +73,7 @@ standard-minifier-css@1.0.4
 standard-minifier-js@1.0.4
 templating@1.1.7
 templating-tools@1.0.2
+tmeasday:test-reporter-helpers@0.2.1
 tracker@1.0.11
 ui@1.0.9
 underscore@1.0.6
