@@ -23,6 +23,7 @@
     border-top: 15px dashed;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
+    visibility: hidden;
   }
 
   .date-input {
@@ -37,8 +38,13 @@
     .create {
       display: block;
     }
+
     .delete {
       display: none;
+    }
+
+    .caret {
+      visibility: visible;
     }
   }
 
