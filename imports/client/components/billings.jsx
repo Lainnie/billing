@@ -1,8 +1,11 @@
 import React from 'react';
 
-import { CardWorkday } from '../components';
+import {
+  CardWorkday,
+  CompaniesList
+} from '../components';
 
-const Billings = ({ workdays }) => (
+const Billings = ({ workdays, companies, chooseCompany }) => (
   <div className="container billings">
     <div className="page-header">
       <div className="row">
@@ -11,6 +14,8 @@ const Billings = ({ workdays }) => (
         </div>
       </div>
     </div>
+
+    <CompaniesList companies={companies} chooseCompany={chooseCompany}/>
 
     <div className="row">
       {workdays.map(workday =>

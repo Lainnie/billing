@@ -6,6 +6,7 @@ import resetNewWorkday from './resetNewWorkday';
 import resetNewCompany from './resetNewCompany';
 import deleteWorkday from './deleteWorkday';
 import changeCompany from './changeCompany';
+import changeCurrentCompany from './changeCurrentCompany';
 import changeCompanyName from './changeCompanyName';
 import changeCompanyPrice from './changeCompanyPrice';
 
@@ -19,5 +20,6 @@ export {
   resetNewCompany,
   changeCompany,
   changeCompanyName,
-  changeCompanyPrice
+  changeCompanyPrice,
+  changeCurrentCompany
 };
