@@ -2,10 +2,10 @@ import React from 'react';
 
 import {
   CardWorkday,
-  CompaniesList
+  CompaniesButton
 } from '../components';
 
-const Billings = ({ workdays, companies, chooseCompany }) => (
+const Billings = (props) => (
   <div className="container billings">
     <div className="page-header">
       <div className="row">
@@ -15,10 +15,11 @@ const Billings = ({ workdays, companies, chooseCompany }) => (
       </div>
     </div>
 
-    <CompaniesList companies={companies} chooseCompany={chooseCompany}/>
+    <CompaniesButton {...props} />
+    <hr />
 
-    <div className="row">
-      {workdays.map(workday =>
+    <div className="jumbotron row">
+      {props.workdays.map(workday =>
         <CardWorkday key={workday._id} {...workday} />
       )}
     </div>

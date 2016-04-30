@@ -15,15 +15,10 @@ const Nav = () => (
 
       <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul className="nav navbar-nav navbar-right">
-          <li><a href="#">Log in</a></li>
+          <li><a href="/">Workdays</a></li>
           <li><a href="/compagnies">Companies</a></li>
           <li><a href="/billings">Billings</a></li>
         </ul>
-        <form className="navbar-form navbar-right" role="search">
-          <div className="form-group">
-            <input type="text" className="form-control" placeholder="Search" />
-          </div>
-        </form>
       </div>
     </div>
   </nav>

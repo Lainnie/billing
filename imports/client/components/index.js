@@ -1,6 +1,7 @@
 import Billings from './billings';
 import Companies from './companies';
 import CompaniesList from './companies-list';
+import CompaniesButton from './companies-button';
 import Company from './company';
 import Footer from './footer';
 import Home from './home';
@@ -19,5 +20,6 @@ export {
   Home,
   RootApp,
   PanelWorkday,
+  CompaniesButton,
   CardWorkday
 };
