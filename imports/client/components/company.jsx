@@ -12,6 +12,7 @@ const Company = (props) => (
           onChange={props.changeName}
           className="heading-input"
           placeholder={props.placeholder}
+          readOnly={!props.changeName}
           value={props.name} />
       </div>
 
@@ -21,6 +22,7 @@ const Company = (props) => (
             onChange={props.changePrice}
             className="body-input"
             placeholder={props.placeholder}
+            readOnly={!props.changePrice}
             value={props.price} />
           </h1>
       </div>
