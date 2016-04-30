@@ -6,6 +6,7 @@
   .delete {
     position: absolute;
     right: 0;
+    bottom: 5px;
     border-radius: 64px;
     padding: 10px 15px;
   }
@@ -54,6 +55,20 @@
     padding: 0;
   }
 
+  .companies-list {
+    height: 171.5px;
+    overflow: scroll;
+    display: none;
+  }
+
+  .panel-footer {
+    padding: 0;
+
+    .company {
+      padding: 10px 15px;
+      margin: 0;
+    }
+  }
 }
 
 .heading-input {

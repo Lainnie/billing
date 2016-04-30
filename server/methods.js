@@ -5,8 +5,8 @@ import { Workdays, Companies } from '../imports/collections';
 Meteor.methods({
   addWorkday(workday) {
     const workdays = Workdays.insert({
-      company: 'Teezily',
-      price: 450,
+      company: workday.company,
+      price: workday.company_price,
       workload: workday.workload,
       workdate: workday.workdate
     });

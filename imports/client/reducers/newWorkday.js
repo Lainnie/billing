@@ -3,8 +3,9 @@ import { moment } from 'meteor/momentjs:moment';
 const initialeState = {
   workdate: moment().valueOf(),
   readable_workdate: 'Select a date',
-  workload: 0,
-  company: 'Select a company'
+  workload: 1,
+  company: 'Select a company',
+  company_price: 0
 };
 
 export function newWorkday(state = initialeState, action) {
@@ -18,6 +19,11 @@ export function newWorkday(state = initialeState, action) {
 
       return Object.assign({}, state, {
         workload: workload
+      });
+    case 'CHANGE_COMPANY':
+      return Object.assign({}, state, {
+        company: action.company.name,
+        company_price: action.company.price
       });
     case 'CHANGE_WORKDATE':
       return Object.assign({}, state, {

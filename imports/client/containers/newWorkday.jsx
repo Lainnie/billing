@@ -2,15 +2,22 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { $ } from 'meteor/jquery';
 import { moment } from 'meteor/momentjs:moment';
+import { composeWithTracker } from 'react-komposer';
 
 import {
   addWorkday,
   changeWorkload,
   changeDate,
+  changeCompany,
   resetNewWorkday
 } from '../actions';
 
-import { Workday } from '../components';
+import {
+  Workday,
+  CompaniesList
+} from '../components';
+
+import { Companies } from '../../collections';
 
 class NewWorkdayContainer extends React.Component {
 
@@ -40,6 +47,20 @@ class NewWorkdayContainer extends React.Component {
         const workload = this.props.workload - 0.1;
 
         this.props.dispatch(changeWorkload(workload));
+      },
+      showCompany: (evt) => {
+        const $panel = $(evt.currentTarget).parents('.panel');
+
+        $panel.find('.panel-body').toggle();
+        $panel.find('.companies-list').toggle();
+      },
+      chooseCompany: (evt) => {
+        const id = evt.currentTarget.id;
+        const company = this.props.companies.find((company) => {
+          return company._id === id;
+        });
+
+        this.props.dispatch(changeCompany(company));
       }
     };
   }
@@ -47,6 +68,10 @@ class NewWorkdayContainer extends React.Component {
   render() {
     return <Workday
       {...this.props}
+      companies_list={<CompaniesList
+        companies={this.props.companies}
+        chooseCompany={this.events().chooseCompany}
+      />}
       style='new'
       workdate={this.props.readable_workdate}
       {...this.events()}
@@ -54,4 +79,11 @@ class NewWorkdayContainer extends React.Component {
   }
 };
 
-export default connect()(NewWorkdayContainer);
+const composer = (props, onData) => {
+  if (Meteor.subscribe('companies.list').ready()) {
+    const companies = Companies.find().fetch();
+    onData(null, {companies});
+  }
+};
+
+export default composeWithTracker(composer)(connect()(NewWorkdayContainer));

@@ -13,6 +13,7 @@ const Workday = (props) => (
           <div className="col-xs-12">{props.workdate}</div>
         </div>
       </div>
+      {props.companies_list}
       <div className="panel-body">
         <span onClick={props.upWorkload} className="dropup">
           <span className="caret"></span>
@@ -21,7 +22,7 @@ const Workday = (props) => (
         <span onClick={props.downWorkload} className="caret"></span>
       </div>
       <div className="panel-footer">
-        {props.company}
+        <p onClick={props.showCompany} className="company">{props.company}</p>
         <a href="#" onClick={props.deleteWorkday} className="delete btn btn-danger">
           <i className="glyphicon glyphicon-minus"></i>
         </a>

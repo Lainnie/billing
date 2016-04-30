@@ -5,6 +5,7 @@ import changeDate from './changeDate';
 import resetNewWorkday from './resetNewWorkday';
 import resetNewCompany from './resetNewCompany';
 import deleteWorkday from './deleteWorkday';
+import changeCompany from './changeCompany';
 import changeCompanyName from './changeCompanyName';
 import changeCompanyPrice from './changeCompanyPrice';
 
@@ -16,6 +17,7 @@ export {
   deleteWorkday,
   resetNewWorkday,
   resetNewCompany,
+  changeCompany,
   changeCompanyName,
   changeCompanyPrice
 };
