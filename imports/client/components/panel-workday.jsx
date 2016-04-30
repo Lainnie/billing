@@ -1,7 +1,7 @@
 import React from 'react';
 import { moment } from 'meteor/momentjs:moment';
 
-const Workday = (props) => (
+const PanelWorkday = (props) => (
   <div className="workday col-xs-12 col-sm-4 col-md-3 col-lg-2">
     <div className={"panel panel-primary text-center " + props.style}>
       <a href="#" onClick={props.addWorkday} className="create btn btn-success">
@@ -31,4 +31,4 @@ const Workday = (props) => (
   </div>
 );
 
-export default Workday;
+export default PanelWorkday;

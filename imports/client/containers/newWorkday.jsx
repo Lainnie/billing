@@ -13,7 +13,7 @@ import {
 } from '../actions';
 
 import {
-  Workday,
+  PanelWorkday,
   CompaniesList
 } from '../components';
 
@@ -66,7 +66,7 @@ class NewWorkdayContainer extends React.Component {
   }
 
   render() {
-    return <Workday
+    return <PanelWorkday
       {...this.props}
       companies_list={<CompaniesList
         companies={this.props.companies}

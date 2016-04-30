@@ -5,7 +5,7 @@ import { moment } from 'meteor/momentjs:moment';
 import sweetalert from 'meteor/kevohagan:sweetalert';
 
 import { deleteWorkday } from '../actions';
-import { Workday } from '../components';
+import { PanelWorkday } from '../components';
 
 class WorkDayContainer extends React.Component {
   events() {
@@ -26,7 +26,7 @@ class WorkDayContainer extends React.Component {
   }
 
   render() {
-    return <Workday
+    return <PanelWorkday
       {...this.props}
       {...this.events()}
     />

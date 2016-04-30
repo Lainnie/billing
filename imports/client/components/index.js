@@ -1,13 +1,16 @@
+import Billings from './billings';
 import Companies from './companies';
-import CompaniesList from './companies_list';
+import CompaniesList from './companies-list';
 import Company from './company';
 import Footer from './footer';
 import Home from './home';
 import Nav from './nav';
 import RootApp from './root';
-import Workday from './workday';
+import CardWorkday from './card-workday';
+import PanelWorkday from './panel-workday';
 
 export {
+  Billings,
   Companies,
   CompaniesList,
   Company,
@@ -15,5 +18,6 @@ export {
   Nav,
   Home,
   RootApp,
-  Workday
+  PanelWorkday,
+  CardWorkday
 };
