@@ -1,4 +1,7 @@
-import { priceWithWorkload } from '../helpers';
+import {
+  priceWithWorkload,
+  modelIsInCollection,
+} from '../helpers';
 
 const initialeState = {
   days: 0,
@@ -9,7 +12,7 @@ const initialeState = {
 export function currentBill(state = initialeState, action) {
   switch(action.type) {
     case 'CHANGE_CURRENT_BILL':
-      if (isInBill(state, action.workday)) {
+      if (modelIsInCollection(state.workdays, action.workday)) {
         return state;
       }
 
@@ -25,8 +28,3 @@ export function currentBill(state = initialeState, action) {
   }
 };
 
-function isInBill(state, workday) {
-  return !!state.workdays.find((w) => {
-    return w._id === workday._id;
-  });
-}
