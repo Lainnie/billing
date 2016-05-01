@@ -1,4 +1,4 @@
-import toDate from './toDate';
+import toDate from './to-date';
 
 export {
   toDate
