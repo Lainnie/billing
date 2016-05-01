@@ -1,14 +1,14 @@
-import addWorkday from './addWorkday';
-import addCompany from './addCompany';
-import changeWorkload from './changeWorkload';
-import changeDate from './changeDate';
-import resetNewWorkday from './resetNewWorkday';
-import resetNewCompany from './resetNewCompany';
-import deleteWorkday from './deleteWorkday';
-import changeCompany from './changeCompany';
-import changeCurrentCompany from './changeCurrentCompany';
-import changeCompanyName from './changeCompanyName';
-import changeCompanyPrice from './changeCompanyPrice';
+import addWorkday from './add-workday';
+import addCompany from './add-company';
+import changeWorkload from './change-workload';
+import changeDate from './change-date';
+import resetNewWorkday from './reset-new-workday';
+import resetNewCompany from './reset-new-company';
+import deleteWorkday from './delete-workday';
+import changeCompany from './change-company';
+import changeCurrentCompany from './change-current-company';
+import changeCompanyName from './change-company-name';
+import changeCompanyPrice from './change-company-price';
 
 export {
   addCompany,
