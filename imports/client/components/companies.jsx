@@ -1,7 +1,9 @@
 import React from 'react';
 
-import { NewCompany } from '../containers';
-import { Company } from '../components';
+import {
+  NewCompany,
+  Company,
+} from '../containers';
 
 const Companies = ({ companies, newCompany }) => (
   <div className="container companies">

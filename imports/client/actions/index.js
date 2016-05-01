@@ -9,6 +9,7 @@ import changeCompany from './change-company';
 import changeCurrentCompany from './change-current-company';
 import changeCompanyName from './change-company-name';
 import changeCompanyPrice from './change-company-price';
+import deleteCompany from './delete-company';
 
 export {
   addCompany,
@@ -21,5 +22,6 @@ export {
   changeCompany,
   changeCompanyName,
   changeCompanyPrice,
-  changeCurrentCompany
+  changeCurrentCompany,
+  deleteCompany,
 };

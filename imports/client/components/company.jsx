@@ -29,7 +29,7 @@ const Company = (props) => (
 
       <div className="panel-footer">
         Total workday ?
-        <a href="#" onClick={props.deleteWorkday} className="delete btn btn-danger">
+        <a href="#" onClick={props.deleteCompany} className="delete btn btn-danger">
           <i className="glyphicon glyphicon-minus"></i>
         </a>
       </div>

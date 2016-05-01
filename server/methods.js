@@ -23,5 +23,8 @@ Meteor.methods({
     });
 
     return companies;
+  },
+  deleteCompany(_id) {
+    Companies.remove({_id});
   }
 });
