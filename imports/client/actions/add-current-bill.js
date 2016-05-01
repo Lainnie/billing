@@ -1,6 +1,6 @@
 export default (workday) => {
   return {
-    type: 'CHANGE_CURRENT_BILL',
+    type: 'ADD_CURRENT_BILL',
     workday
   };
 };

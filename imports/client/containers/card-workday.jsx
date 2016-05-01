@@ -3,14 +3,20 @@ import { connect } from 'react-redux';
 
 import { CardWorkday } from '../components';
 
-import { changeCurrentBill } from '../actions';
+import {
+  addCurrentBill,
+  removeCurrentBill,
+} from '../actions';
 
 class CardWorkdayContainer extends React.Component {
 
   events() {
     return {
       selectWorkday: () => {
-        this.props.dispatch(changeCurrentBill(this.props));
+        this.props.dispatch(addCurrentBill(this.props));
+      },
+      unselectWorkday: () => {
+        this.props.dispatch(removeCurrentBill(this.props));
       }
     };
   }
@@ -24,4 +30,10 @@ class CardWorkdayContainer extends React.Component {
 
 };
 
-export default connect()(CardWorkdayContainer);
+const mapStateToProps = (state) => {
+  return {
+    workdays: state.currentBill.workdays
+  };
+};
+
+export default connect(mapStateToProps)(CardWorkdayContainer);

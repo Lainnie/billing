@@ -10,6 +10,7 @@ import RootApp from './root';
 import CardWorkday from './card-workday';
 import PanelWorkday from './panel-workday';
 import CurrentBill from './current-bill';
+import CardButton from './card-button';
 
 export {
   Billings,
@@ -24,4 +25,5 @@ export {
   CompaniesButton,
   CardWorkday,
   CurrentBill,
+  CardButton,
 };
