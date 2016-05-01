@@ -10,6 +10,16 @@
   }
 }
 
+.navbar-brand-image {
+  padding: 0px;
+}
+
+.navbar-brand-image > img {
+  height: 100%;
+  padding: 15px;
+  width: auto;
+}
+
 .panel {
   .delete {
     position: absolute;

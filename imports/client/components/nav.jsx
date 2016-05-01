@@ -10,10 +10,15 @@ const Nav = () => (
           <span className="icon-bar"></span>
           <span className="icon-bar"></span>
         </button>
-        <a className="navbar-brand" href="/">Billing</a>
+        <a className="navbar-brand navbar-brand-image" href="/">
+          <img src="images/logo.png" />
+        </a>
       </div>
-
       <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <a className="navbar-brand" href="/">
+          Billings
+        </a>
+
         <ul className="nav navbar-nav navbar-right">
           <li><a href="/">Workdays</a></li>
           <li><a href="/compagnies">Companies</a></li>
