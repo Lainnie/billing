@@ -11,6 +11,7 @@ import changeCompanyName from './change-company-name';
 import changeCompanyPrice from './change-company-price';
 import deleteCompany from './delete-company';
 import changeCurrentBill from './change-current-bill';
+import resetCurrentBill from './reset-current-bill';
 
 export {
   addCompany,
@@ -26,4 +27,5 @@ export {
   changeCurrentCompany,
   deleteCompany,
   changeCurrentBill,
+  resetCurrentBill,
 };

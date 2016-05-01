@@ -5,7 +5,10 @@ import { composeWithTracker } from 'react-komposer';
 
 import { Billings } from '../components';
 
-import { changeCurrentCompany } from '../actions';
+import {
+  changeCurrentCompany,
+  resetCurrentBill,
+} from '../actions';
 
 import {
   Workdays,
@@ -21,7 +24,8 @@ class BillingsContainer extends React.Component {
           return company._id === id;
         });
 
-        this.props.dispatch(changeCurrentCompany(company))
+        this.props.dispatch(changeCurrentCompany(company));
+        this.props.dispatch(resetCurrentBill());
       }
     };
   }
