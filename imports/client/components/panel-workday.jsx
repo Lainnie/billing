@@ -1,5 +1,4 @@
 import React from 'react';
-import { moment } from 'meteor/momentjs:moment';
 
 const PanelWorkday = (props) => (
   <div className="workday col-xs-12 col-sm-4 col-md-3 col-lg-2">

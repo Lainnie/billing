@@ -1,4 +1,5 @@
 import { moment } from 'meteor/momentjs:moment';
+import { toDate } from '../helpers';
 
 const initialeState = {
   workdate: moment().valueOf(),
@@ -28,7 +29,7 @@ export function newWorkday(state = initialeState, action) {
     case 'CHANGE_WORKDATE':
       return Object.assign({}, state, {
         workdate: action.workdate,
-        readable_workdate: moment(action.workdate).format('D MMMM YYYY')
+        readable_workdate: toDate(action.workdate)
       });
     case 'RESET_NEW_WORKDAY':
       return Object.assign({}, state, initialeState);

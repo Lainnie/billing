@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { $ } from 'meteor/jquery';
-import { moment } from 'meteor/momentjs:moment';
 import { composeWithTracker } from 'react-komposer';
 
 import {

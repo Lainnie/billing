@@ -7,10 +7,7 @@ import { NewWorkday, Workday } from '../containers';
 
 import { Workdays } from '../../collections';
 
-// Where to put helpers methods ?
-const toDate = (timeStamp) => {
-  return moment(timeStamp).format('D MMMM YYYY');
-};
+import { toDate } from '../helpers';
 
 const Home = ({ workdays, newWorkday }) => (
   <div className="container">
