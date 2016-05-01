@@ -2,10 +2,11 @@ import React from 'react';
 
 import { FlowRouter } from 'meteor/kadira:flow-router';
 import { mount } from 'react-mounter';
-import { RootApp, Home } from '../components';
+import { RootApp } from '../components';
 import {
   Companies,
-  Billings
+  Billings,
+  Home,
 } from '../containers';
 
 FlowRouter.route('/', {

@@ -1,11 +1,6 @@
 import React from 'react';
-import { Meteor } from 'meteor/meteor';
-import { connect } from 'react-redux';
-import { composeWithTracker } from 'react-komposer';
 
 import { NewWorkday, Workday } from '../containers';
-
-import { Workdays } from '../../collections';
 
 import { toDate } from '../helpers';
 
@@ -28,19 +23,4 @@ const Home = ({ workdays, newWorkday }) => (
   </div>
 );
 
-const mapStateToProps = (state) => {
-  return {
-    newWorkday: state.newWorkday
-  };
-};
-
-const composer = (props, onData) => {
-  if (Meteor.subscribe('workdays.list').ready()) {
-    const workdays = Workdays.find({}, {sort: { workdate: -1}});
-    onData(null, { workdays });
-  };
-};
-
-const HomeContainer = connect(mapStateToProps)(Home);
-
-export default composeWithTracker(composer)(HomeContainer);
+export default Home;
