@@ -2,7 +2,10 @@ import React from 'react';
 
 import { CompaniesButton } from '.';
 
-import { CardWorkday } from '../containers';
+import {
+  CardWorkday,
+  CurrentBill,
+} from '../containers';
 
 const Billings = (props) => (
   <div className="container billings">
@@ -15,6 +18,9 @@ const Billings = (props) => (
     </div>
 
     <CompaniesButton {...props} />
+    <hr />
+
+    <CurrentBill {...props} />
     <hr />
 
     <div className="jumbotron row">

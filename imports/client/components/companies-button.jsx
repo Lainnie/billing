@@ -2,6 +2,7 @@ import React from 'react';
 
 const CompaniesButton = ({ companies, chooseCompany, currentCompany }) => (
   <div className="row">
+    <h3>Companies</h3>
     {companies.map(company =>
       <a
         key={company._id}

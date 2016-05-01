@@ -2,7 +2,7 @@ import React from 'react';
 import { toDate } from '../helpers';
 
 const CardWorkday = (props) => (
-  <div className="card-workday col-xs-12 col-sm-6 col-md-4">
+  <div onClick={props.selectWorkday} className="card-workday col-xs-12 col-sm-6 col-md-4">
     <div className="panel panel-primary text-center">
       <div className="panel-heading">
         <div className="row">

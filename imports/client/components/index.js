@@ -9,6 +9,7 @@ import Nav from './nav';
 import RootApp from './root';
 import CardWorkday from './card-workday';
 import PanelWorkday from './panel-workday';
+import CurrentBill from './current-bill';
 
 export {
   Billings,
@@ -21,5 +22,6 @@ export {
   RootApp,
   PanelWorkday,
   CompaniesButton,
-  CardWorkday
+  CardWorkday,
+  CurrentBill,
 };
