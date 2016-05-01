@@ -1,6 +1,5 @@
 import React from 'react';
-import { Provider } from 'react-redux';
-import { connect } from 'react-redux';
+import { Provider, connect } from 'react-redux';
 
 import { store } from '../core';
 import { Nav, Footer } from '.';

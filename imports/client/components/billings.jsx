@@ -1,9 +1,8 @@
 import React from 'react';
 
-import {
-  CardWorkday,
-  CompaniesButton
-} from '../components';
+import { CompaniesButton } from '.';
+
+import { CardWorkday } from '../containers';
 
 const Billings = (props) => (
   <div className="container billings">

@@ -4,6 +4,7 @@ import Billings from './billings';
 import Companies from './companies';
 import NewCompany from './newCompany';
 import Home from './home';
+import CardWorkday from './card-workday';
 
 export {
   Billings,
@@ -12,4 +13,5 @@ export {
   NewWorkday,
   Workday,
   Home,
+  CardWorkday,
 };
