@@ -1,3 +1,5 @@
+import { priceWithWorkload } from '../helpers';
+
 const initialeState = {
   days: 0,
   price: 0,
@@ -22,10 +24,6 @@ export function currentBill(state = initialeState, action) {
       return state;
   }
 };
-
-function priceWithWorkload(workday) {
-  return workday.price * workday.workload;
-}
 
 function isInBill(state, workday) {
   return !!state.workdays.find((w) => {
