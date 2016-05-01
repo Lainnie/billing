@@ -71,6 +71,7 @@ spacebars@1.0.10
 spacebars-compiler@1.0.10
 standard-minifier-css@1.0.5
 standard-minifier-js@1.0.5
+stevezhu:lodash@4.11.1
 templating@1.1.8
 templating-tools@1.0.3
 tmeasday:test-reporter-helpers@0.2.1
