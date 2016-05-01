@@ -1,8 +1,8 @@
-import NewWorkday from './newWorkday';
+import NewWorkday from './new-workday';
 import Workday from './workday';
 import Billings from './billings';
 import Companies from './companies';
-import NewCompany from './newCompany';
+import NewCompany from './new-company';
 import Home from './home';
 import CardWorkday from './card-workday';
 

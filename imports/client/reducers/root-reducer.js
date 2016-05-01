@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
 
-import { newWorkday } from './newWorkday';
-import { newCompany } from './newCompany';
-import { currentCompany } from './currentCompany';
+import { newWorkday } from './new-workday';
+import { newCompany } from './new-company';
+import { currentCompany } from './current-company';
 
 const rootReducer = combineReducers({
   newWorkday,
